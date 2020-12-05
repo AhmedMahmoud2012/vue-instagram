@@ -40,7 +40,7 @@ export default {
       type: FETCH_DATA,
       data: {
         username: state.currentUser,
-        numberofFeeds: state.currentFeedsNumber,
+        numberOfFeeds: state.currentFeedsNumber,
       },
     });
   },
