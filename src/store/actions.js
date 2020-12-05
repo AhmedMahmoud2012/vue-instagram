@@ -10,6 +10,8 @@ import { fetchData } from "../services/data.service";
 export default {
   async [FETCH_DATA]({ commit, state, dispatch }, payload) {
     try {
+      console.log({ payload });
+
       const { username, numberofFeeds } = payload.data ? payload.data : payload;
       dispatch({ type: START_LOADING });
       dispatch({ type: SET_CURRENT_USER, username });

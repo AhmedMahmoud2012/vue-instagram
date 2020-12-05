@@ -82,6 +82,8 @@ export const fetchData = async (username, numberOfFeeds, filter) => {
     feeds = getFromCache(username);
   } else {
     let response = await fetch(ENDPOINT.replace(":username", username));
+    console.log(ENDPOINT.replace(":username", username));
+
     response = await response.json();
     feeds = getFeedsFromResponse(response);
     saveInCache(username, feeds);

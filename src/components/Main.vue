@@ -30,7 +30,7 @@ import List from "./List";
 export default {
   name: "Main",
   mounted() {
-    this.fetch_data(DEFAULT_USER);
+    this.fetch_data({ username: DEFAULT_USER });
   },
   components: {
     Users,
