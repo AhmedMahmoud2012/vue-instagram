@@ -6,7 +6,7 @@
       :key="user"
       :text-color="user === currentUser?'white':'deep-purple accent-4'"
       :color="user === currentUser?'deep-purple accent-4':'white'"
-      @click="fetch_data(user)"
+      @click="fetch_data({username:user})"
     >
       <v-avatar left>
         <v-icon>mdi-account-circle</v-icon>
