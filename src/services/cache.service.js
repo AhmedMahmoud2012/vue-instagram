@@ -1,5 +1,5 @@
 const TS_PREFIX = "TS";
-const CACHE_TIME = 1 * 1000; // one hour
+const CACHE_TIME = 60 * 60 * 1000; // one hour
 export const saveInCache = (entryName, data) => {
   removeFromCache(entryName);
   localStorage.setItem(entryName, JSON.stringify(data));
