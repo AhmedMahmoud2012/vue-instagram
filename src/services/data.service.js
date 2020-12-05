@@ -88,8 +88,9 @@ export const fetchData = async (username, numberOfFeeds, filter) => {
     feeds = getFeedsFromResponse(response);
     saveInCache(username, feeds);
   }
+  console.log(Number(numberOfFeeds));
   if (Number(numberOfFeeds) < feeds.length) {
-    feeds = feeds.slice(numberOfFeeds);
+    feeds = feeds.slice(0, numberOfFeeds);
   }
   return filter_method ? feeds.filter(filter_method) : feeds;
 };

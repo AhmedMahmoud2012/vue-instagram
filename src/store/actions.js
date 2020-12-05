@@ -12,10 +12,11 @@ export default {
     try {
       console.log({ payload });
 
-      const { username, numberofFeeds } = payload.data ? payload.data : payload;
+      const { username, numberOfFeeds } = payload.data ? payload.data : payload;
+
       dispatch({ type: START_LOADING });
       dispatch({ type: SET_CURRENT_USER, username });
-      const feeds = await fetchData(username, numberofFeeds, state.filter);
+      const feeds = await fetchData(username, numberOfFeeds, state.filter);
       commit(FETCH_DATA, feeds);
     } catch (err) {
       console.log(err);
